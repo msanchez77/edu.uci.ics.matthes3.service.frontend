@@ -1,0 +1,15 @@
+#customer-register {
+    margin: auto;
+    margin-top: 5em;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+}
+
+.customer-firstName, .customer-lastName, .customer-cc-id, .customer-address {
+    height: 55px;
+    width: 320px;
+    border: 2px solid #f4f4f4;
+    font-size: 25px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,44 @@
+#checkout {
+    margin: auto;
+}
+
+#checkout-body {
+    height: 1000px;
+    width: 1000px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+#checkout-header {
+    text-align: center;
+    border-bottom: 3px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#checkout-table {
+    border: 1px solid black;
+    width: 1000px;
+    height: 90px;
+    text-align: center;
+}
+
+.checkout-row {
+    height: 40px;
+}
+
+#checkout-confirmation-button {
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 400px;
+
+    font-size: 20px;
+    background-color: #0cff00;
+}
+
+#checkout-message {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}

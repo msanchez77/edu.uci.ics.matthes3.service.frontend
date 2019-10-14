@@ -1,0 +1,28 @@
+body {
+    background-color: #6da5ff;
+}
+
+#persistent-nav {
+    display: inline;
+}
+
+nav	{
+    background-color: #EAE9E9;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav_li {
+    color: #1971FC;
+    font-size: 30px;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+#header {
+    font-size: 50px;
+    padding-left: 20px;
+}

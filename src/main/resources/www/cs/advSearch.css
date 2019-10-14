@@ -1,0 +1,25 @@
+#adv-search-query {
+    display: inline-block;
+    height: 30px;
+    width: 20em;
+}
+
+#adv-search-param {
+    width: 5em;
+}
+
+#adv-body-content {
+    height: 2200px;
+    width: 1000px;
+    background-color: white;
+    margin: auto;
+}
+
+#adv-previous-button {
+    margin-right: 10px;
+    margin-left: 448px;
+}
+
+#adv-next-button {
+    margin-left: 460px;
+}

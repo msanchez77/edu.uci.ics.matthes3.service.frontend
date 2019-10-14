@@ -1,0 +1,27 @@
+h2 {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 60px;
+}
+
+strong {
+    font-size: 40px;
+    border-bottom: 3px solid red;
+}
+
+.movie-description {
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+.movie-info {
+    margin: 0;
+}
+
+#qs-movie-overview {
+    font-size: 30px;
+}
+
+#qs-movie-info-message {
+    font-size: 30px;
+}

@@ -1,0 +1,42 @@
+main {
+    display: flex;
+}
+
+#register {
+    margin: auto;
+    margin-top: 5em;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    /*padding-top: 25px;*/
+}
+
+.container {
+    margin-left: 40px;
+}
+
+.email-register, .password-register {
+    height: 55px;
+    width: 320px;
+    border: 2px solid #f4f4f4;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.login-register-button {
+    background-color: #00ff00;
+    color: white;
+    height: 55px;
+    width: 320px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.message {
+    text-align: center;
+    color: red;
+}

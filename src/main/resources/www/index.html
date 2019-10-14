@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabflix</title>
+
+    <!--AJAX-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Javascript Files-->
+
+        <!--core-->
+    <script src="js/core/requestBackend.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/nav-bar.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/register.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/login.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/quickSearch.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/movieDetails.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/browse.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/advSearch.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/cart.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/customer.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/creditCard.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/checkout.js" type="text/javascript" defer="defer"></script>
+    <script src="js/core/order.js" type="text/javascript" defer="defer"></script>
+
+    <script src="js/core/elements.js" type="text/javascript" defer="defer"></script>
+
+        <!--utilities-->
+    <script src="js/utilities/clearLoadHtml.js" type="text/javascript" defer="defer"></script>
+    <script src="js/utilities/resultCodes.js" type="text/javascript" defer="defer"></script>
+    <script src="js/utilities/endpoints.js" type="text/javascript" defer="defer"></script>
+    <script src="js/utilities/js-cookie.js" type="text/javascript" defer="defer"></script>
+    <script src="js/utilities/manageCookies.js" type="text/javascript" defer="defer"></script>
+
+
+    <!--CSS Files-->
+    <link rel="stylesheet" type="text/css" href="cs/style.css">
+    <link rel="stylesheet" type="text/css" href="cs/index.css">
+    <link rel="stylesheet" type="text/css" href="cs/register.css">
+    <link rel="stylesheet" type="text/css" href="cs/login.css">
+    <link rel="stylesheet" type="text/css" href="cs/quickSearch.css">
+    <link rel="stylesheet" type="text/css" href="cs/movieDetails.css">
+    <link rel="stylesheet" type="text/css" href="cs/browse.css">
+    <link rel="stylesheet" type="text/css" href="cs/advSearch.css">
+    <link rel="stylesheet" type="text/css" href="cs/cart.css">
+    <link rel="stylesheet" type="text/css" href="cs/creditCard.css">
+    <link rel="stylesheet" type="text/css" href="cs/customer.css">
+    <link rel="stylesheet" type="text/css" href="cs/checkout.css">
+    <link rel="stylesheet" type="text/css" href="cs/orderHistory.css">
+
+</head>
+<body>
+
+    <div id="persistent-nav">
+        <nav>
+            <em id="header">Fabflix</em>
+            <ul>
+                <a href="" class="nav_li" id="home-page-link">Home</a>
+                <a href="" class="nav_li" id="register-page-link">Register</a>
+                <a href="" class="nav_li" id="login-page-link">Login</a>
+                <a href="" class="nav_li" id="browse-page-link">Browse</a>
+                <a href="" class="nav_li" id="adv-search-page-link">Adv. Search</a>
+                <a href="" class="nav_li" id="cart-page-link">Cart</a>
+                <a href="" class="nav_li" id="order-page-link">Order History</a>
+            </ul>
+
+        </nav>
+    </div>
+
+<!--    ************************************************************************************    -->
+
+    <main>
+
+        <div id="index">
+            <div class="container">
+                <div class="search-bar">
+                    <form action="#" id="quick-search-form">
+                        <p class="param">Search By: </p>
+                        <select class="quick-search" id="quick-search-param">
+                            <option value="title">Title</option>
+                            <option value="genre">Genre</option>
+                        </select>
+                        <br>
+                        <p class="param">Order By: </p>
+                        <select class="quick-search" id="quick-search-orderby">
+                            <option value="rating">Rating</option>
+                            <option value="title">Title</option>
+                        </select>
+                        <br>
+                        <p class="param">Direction: </p>
+                        <select class="quick-search" id="quick-search-direction">
+                            <option value="desc">Descending</option>
+                            <option value="asc">Ascending</option>
+                        </select>
+                        <br>
+                        <p class="param">Limit per page: </p>
+                        <select class="quick-search" id="quick-search-limit">
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                        <br>
+                        <input type="text" id="quick-search-query"/>
+                        <button type="submit">Quick Search</button>
+                    </form>
+                </div>
+                <br>
+                <div id="body-content">
+
+                </div>
+
+                    <div class="movie-description">
+                        <p id="movie-overview"></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="register">
+            <h1>Register</h1>
+            <div class="container">
+                <form action="#" id="register-form">
+                    <input type="text" name="email" class="email-register"
+                           placeholder="Email" required/>
+                    <br>
+                    <input type="text" name="password" class="password-register" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+                    <br>
+                    <div class="message">&nbsp;</div>
+                    <br>
+                    <button type="submit" class="login-register-button" id="register-button">Register!</button>
+                    <br>
+                    <button type="button" class="login-register-button" id="register-login-page">Login Page</button>
+                    <br>
+                    <button type="button" class="login-register-button" id="register-home-page">Home Page</button>
+                </form>
+            </div>
+
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="login">
+            <h1>Login</h1>
+            <div class="container">
+                <form action="#" id="login-form">
+                    <input type="text" name="email" class="email-login"
+                           placeholder="Email" required/>
+                    <br>
+                    <input type="text" name="password" class="password-login" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+                    <br>
+                    <div class="message">&nbsp;</div>
+                    <br>
+                    <button type="submit" class="login-register-button" id="login-button">Log In!</button>
+                    <br>
+                    <button type="submit" class="login-register-button" id="login-register-page">Register Page</button>
+                    <br>
+                    <button type="submit" class="login-register-button" id="login-home-page">Home Page</button>
+                </form>
+            </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="browse">
+            <div class="container">
+                <div class="search-bar">
+                    <form action="#" id="browse-form">
+                            <p class="param">Genres: </p>
+                            <select class="quick-search" id="genres-dropdown">
+
+                            </select>
+                            <br>
+                            <p class="param">Order By: </p>
+                            <select class="quick-search" id="browse-orderby">
+                                <option value="rating">Rating</option>
+                                <option value="title">Title</option>
+                            </select>
+                            <br>
+                            <p class="param">Direction: </p>
+                            <select class="quick-search" id="browse-direction">
+                                <option value="desc">Descending</option>
+                                <option value="asc">Ascending</option>
+                            </select>
+                            <br>
+                            <p class="param">Limit per page: </p>
+                            <select class="quick-search" id="browse-limit">
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </select>
+                            <br>
+                            <button type="submit">Browse Genre</button>
+                    </form>
+                </div>
+                    <br>
+                <div id="browse-body-content">
+
+                </div>
+            </div>
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="adv-search">
+            <div class="container">
+                <div class="search-bar">
+                    <form action="#" id="adv-search-form">
+                        <p class="param">Title </p>
+                        <input type="text" id="adv-search-title">
+                        <br>
+                        <p class="param">Genre: </p>
+                        <input type="text" id="adv-search-genre">
+                        <br>
+                        <p class="param">Year: </p>
+                        <input type="text" id="adv-search-year">
+                        <br>
+                        <p class="param">Director: </p>
+                        <input type="text" id="adv-search-director">
+                        <br>
+                        <p class="param">Order By: </p>
+                        <select class="quick-search" id="adv-search-orderby">
+                            <option value="rating">Rating</option>
+                            <option value="title">Title</option>
+                        </select>
+                        <br>
+                        <p class="param">Direction: </p>
+                        <select class="quick-search" id="adv-search-direction">
+                            <option value="desc">Descending</option>
+                            <option value="asc">Ascending</option>
+                        </select>
+                        <br>
+                        <p class="param">Limit per page: </p>
+                        <select class="quick-search" id="adv-search-limit">
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                        <br>
+                        <button type="submit">Advanced Search</button>
+                    </form>
+                </div>
+                <br>
+                <div id="adv-body-content">
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="cart">
+
+            <div id="cart-body">
+                <h2 id="cart-header">Fabflix Shopping Cart</h2>
+                <table id="cart-table">
+<!--                    <tr><th>Movie Title</th><th>Quantity</th><th>&nbsp;</th><th>&nbsp;</th></tr>-->
+
+
+                </table>
+                <button type="button" id="clear-button">Clear Cart</button>
+
+                <button type="button" id="checkout-button">Checkout</button>
+
+            </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="creditCard-register">
+
+            <h1>Insert Credit Card</h1>
+            <div class="container">
+                <form action="#" id="creditCard-form">
+                    <input type="number" name="ccId" class="cc-id"
+                           placeholder="16-20 Digit Number" required/>
+                    <br>
+                    <input type="text" name="first-name" class="cc-firstName"
+                           placeholder="First name" required />
+                    <br>
+                    <input type="text" name="last-name" class="cc-lastName"
+                           placeholder="Last name" required />
+                    <br>
+                    <input type="date" name="expiration" class="cc-expiration" required />
+                    <br>
+                    <div class="message">&nbsp;</div>
+                    <br>
+                    <button type="submit" class="login-register-button" id="creditCard-register-button">Register Credit Card!</button>
+                    <br>
+                </form>
+            </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="customer-register">
+
+            <h1>Insert Customer</h1>
+            <div class="container">
+                <form action="#" id="customer-form">
+                    <input type="text" name="first-name" class="customer-firstName"
+                           placeholder="First name" required />
+                    <br>
+                    <input type="text" name="last-name" class="customer-lastName"
+                           placeholder="Last name" required />
+                    <br>
+                    <input type="number" name="ccId" class="customer-cc-id"
+                           placeholder="16-20 Digit Number" required/>
+                    <br>
+                    <input type="text" name="address" class="customer-address"
+                           placeholder="Street Address" required/>
+                    <br>
+                    <div class="message">&nbsp;</div>
+                    <br>
+                    <button type="submit" class="login-register-button" id="customer-register-button">Register Customer!</button>
+                    <br>
+                </form>
+            </div>
+
+        </div>
+
+<!--    ************************************************************************************    -->
+
+        <div id="checkout">
+
+            <div id="checkout-body">
+                <h2 id="checkout-header">Order Confirmation Form</h2>
+<!--                <table id="checkout-table">-->
+<!--                    <tr><th>Movie Title</th><th>Quantity</th><th>&nbsp;</th><th>&nbsp;</th></tr>-->
+
+
+<!--                </table>-->
+                <button type="button" id="checkout-confirmation-button">Place order!</button>
+
+
+                <div id="checkout-message">&nbsp;</div>
+
+            </div>
+
+        </div>
+
+<!--        -->
+
+        <div id="order-history">
+
+            <div id="order-body">
+                <h2 id="order-header">Order History</h2>
+                <table id="order-table">
+                    <tr><th>Movie Title</th><th>Quantity</th>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

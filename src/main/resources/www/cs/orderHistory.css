@@ -1,0 +1,28 @@
+#order-history {
+    margin: auto;
+}
+
+#order-body {
+    height: 1000px;
+    width: 1000px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+#order-header {
+    text-align: center;
+    border-bottom: 3px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#order-table {
+    border: 1px solid black;
+    width: 1000px;
+    height: 90px;
+    text-align: center;
+}
+
+.order-row {
+    height: 40px;
+}

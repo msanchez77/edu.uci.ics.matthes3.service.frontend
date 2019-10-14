@@ -1,0 +1,22 @@
+/*#browse-header {*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+/*    background-color: white;*/
+/*    margin: auto;*/
+/*}*/
+
+#browse-body-content {
+    height: 4900px;
+    width: 1000px;
+    background-color: white;
+    margin: auto;
+}
+
+#browse-previous-button {
+    margin-right: 10px;
+    margin-left: 448px;
+}
+
+#browse-next-button {
+    margin-left: 460px;
+}
